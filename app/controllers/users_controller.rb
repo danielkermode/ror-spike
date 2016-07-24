@@ -61,6 +61,7 @@ class UsersController < ApplicationController
     # Confirms the correct user.
     def correct_user
       @user = User.find(params[:id])
-      redirect_to(root_url) unless current_user?(@user)
+      red = current_user ? user_url : root_url
+      redirect_to(red) unless current_user?(@user)
     end
 end
