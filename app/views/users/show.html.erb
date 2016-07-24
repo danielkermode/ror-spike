@@ -1,6 +1,10 @@
 <p>
-  <strong>Username:</strong>
-  <%= @user.username %>
+  Benvenuti! This is <strong><%= @user.username %>'s</strong> page.
 </p>
-<%= link_to 'Edit', edit_user_path(@user) %> |
+<% if current_user?(@user)%>
+  <%= link_to 'Edit', edit_user_path(@user) %> |
+<% end %>
 <%= link_to 'Back', users_path %>
+<br>
+<img src="http://www.whatthefreud.com/wp-content/uploads/2012/08/beardedfreud.jpg">
+
