@@ -8,7 +8,7 @@ Migrations: `rails db:migrate`
 
 Start server: `rails server`
 
-Tests: `rails test`
+Tests: `bundle exec rspec`
 
 
 
