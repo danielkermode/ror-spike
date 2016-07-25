@@ -1,3 +1,6 @@
-<h1>Ciao, this is a users app</h1>
-<%= link_to 'See users', controller: 'users' %><br>
-<%= link_to 'Log in', login_url %>
+<h1>This is an app with users.</h1>
+<%= link_to 'See users', users_path, {:class => 'btn btn-default'} %>
+<% unless logged_in? %>
+  <%= link_to 'Log in', login_url, {:class => 'btn btn-default'}  %>
+  <%= link_to 'Register', new_user_path, {:class => 'btn btn-default'} %>
+<% end %>
